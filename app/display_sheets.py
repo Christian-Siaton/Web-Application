@@ -83,8 +83,9 @@ def display_balance_sheet (symbol):
         print('-----------------------------------------')
         print('')
 
-company = input("Please enter a valid company ticker:")
-display_balance_sheet(company)    
+    return clean_years
+
+ 
 
 def display_income_statement (symbol):
     url = f'https://www.alphavantage.co/query?function=INCOME_STATEMENT&symbol={symbol}&apikey={API_KEY}'
@@ -152,8 +153,7 @@ def display_income_statement (symbol):
         print('-----------------------------------------')
         print('')
 
-company = input("Please enter a valid company ticker:")
-display_income_statement(company)
+
 
 def display_cashflow_statement (symbol):
     url = f'https://www.alphavantage.co/query?function=CASH_FLOW&symbol={symbol}&apikey={API_KEY}'
@@ -229,5 +229,15 @@ def display_cashflow_statement (symbol):
         print('-----------------------------------------')
         print('')
 
-company = input("Please enter a valid company ticker:")
-display_cashflow_statement(company)
+
+
+if __name__ == "__main__": 
+
+    company = input("Please enter a valid company ticker:")
+    display_balance_sheet(company)   
+
+    company = input("Please enter a valid company ticker:")
+    display_income_statement(company)
+
+    company = input("Please enter a valid company ticker:")
+    display_cashflow_statement(company)
