@@ -85,8 +85,6 @@ def display_balance_sheet (symbol):
 
     return clean_years
 
- 
-
 def display_income_statement (symbol):
     url = f'https://www.alphavantage.co/query?function=INCOME_STATEMENT&symbol={symbol}&apikey={API_KEY}'
     r = requests.get(url)
@@ -152,8 +150,6 @@ def display_income_statement (symbol):
         print('')
         print('-----------------------------------------')
         print('')
-
-
 
 def display_cashflow_statement (symbol):
     url = f'https://www.alphavantage.co/query?function=CASH_FLOW&symbol={symbol}&apikey={API_KEY}'
@@ -228,8 +224,6 @@ def display_cashflow_statement (symbol):
         print('')
         print('-----------------------------------------')
         print('')
-
-
 
 if __name__ == "__main__": 
 
