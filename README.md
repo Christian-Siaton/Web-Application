@@ -2,7 +2,10 @@
 
 ## Usage
 
-
+Display Sheets
+```sh
+python -m app.display_sheets
+```
 
 ## Setup
 

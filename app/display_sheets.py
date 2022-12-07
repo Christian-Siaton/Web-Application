@@ -231,11 +231,11 @@ def display_cashflow_statement (symbol):
 
 if __name__ == "__main__": 
 
-    company = input("Please enter a valid company ticker:")
+    company = input("Please enter a valid company ticker to display its most recent Balance Sheets:")
     display_balance_sheet(company)   
 
-    company = input("Please enter a valid company ticker:")
+    company = input("Please enter a valid company ticker to display its most recent Income Statements:")
     display_income_statement(company)
 
-    company = input("Please enter a valid company ticker:")
+    company = input("Please enter a valid company ticker to display its most recent Cash Flow Statements:")
     display_cashflow_statement(company)
