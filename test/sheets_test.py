@@ -14,6 +14,7 @@ def test_retrieval():
     assert "Common Stock" in first_item
 
     result = display_income_statement("IBM")
+   # breakpoint()
     assert isinstance(result,list)
     first_item = result[0]
     assert isinstance(first_item,dict)
@@ -21,7 +22,7 @@ def test_retrieval():
     assert "Depreciation" in first_item
     assert "Net Income" in first_item
 
-    result = display_income_statement("IBM")
+    result = display_cashflow_statement("IBM")
     assert isinstance(result,list)
     first_item = result[0]
     assert isinstance(first_item,dict)
@@ -29,7 +30,10 @@ def test_retrieval():
     assert "CASH FLOW FROM INVESTMENT" in first_item
     assert "CASH FLOW FROM FINANCING" in first_item
 
+
+
+def test_usd_format():
     assert format_usd(808) == '$808'
-    assert format_usd(123456.789) =='$123457'
+    assert format_usd(123456.789) =='$123,457'
 
 

@@ -151,6 +151,8 @@ def display_income_statement (symbol):
         print('-----------------------------------------')
         print('')
 
+    return clean_years
+
 def display_cashflow_statement (symbol):
     url = f'https://www.alphavantage.co/query?function=CASH_FLOW&symbol={symbol}&apikey={API_KEY}'
     r = requests.get(url)
@@ -224,6 +226,8 @@ def display_cashflow_statement (symbol):
         print('')
         print('-----------------------------------------')
         print('')
+
+    return clean_years
 
 if __name__ == "__main__": 
 
