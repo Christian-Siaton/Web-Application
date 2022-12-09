@@ -2,7 +2,8 @@ requests
 
 python-dotenv
 
-#for our web app interface:
+pytest
+
 flask
 
-pytest
+gunicorn
