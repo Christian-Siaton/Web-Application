@@ -26,7 +26,7 @@ def is_dashboard():
 
     try:
 
-<<<<<<< HEAD
+
         info= display_income_statement(symbol=symbol)
 
 
@@ -62,19 +62,19 @@ def is_dashboard():
 
 
 
-=======
-web-app
-        clean_years = display_income_statement(symbol=symbol)
->>>>>>> 83d2fd77834a7fd35cf679537296eaf071e55781
 
+        clean_years = display_income_statement(symbol=symbol)
+        
         return render_template("is_dashboard.html",
             symbol=symbol,
             table_data = formatted_data
 
+        clean_years = display_income_statement(symbol=symbol)
 
-<<<<<<< HEAD
-            
-=======
+        return render_template("is_dashboard.html",
+            symbol=symbol,
+            clean_years = clean_years
+
             #zero = ('Fiscal Date Ending: ' + clean_years[0]['fiscalDateEnding']),
             #one = ('Reported Currency: ' + clean_years[0]['reportedCurrency']),
             #two = ('Total Revenue: ' + clean_years[0]['totalRevenue']),
@@ -104,8 +104,6 @@ web-app
         return render_template("is_dashboard.html",
             symbol=symbol,
             ics = info
-main
->>>>>>> 83d2fd77834a7fd35cf679537296eaf071e55781
         )
     except Exception as err:
         print('OOPS', err)

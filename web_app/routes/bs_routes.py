@@ -73,11 +73,9 @@ def bs_dashboard():
 
         return render_template("bs_dashboard.html",
             symbol=symbol,
-<<<<<<< HEAD
+
             table_data = formatted_data            
-    
-=======
-web-app
+            
             clean_years = clean_years
             
             #zero = ('Fiscal Date Ending: ' + clean_years[0]['fiscalDateEnding']),
@@ -105,8 +103,6 @@ web-app
             #twentytwo = ('Net Income: ' + clean_years[0]['netIncome'])
 
             bs = clean_years
-main
->>>>>>> 83d2fd77834a7fd35cf679537296eaf071e55781
             
         )
     except Exception as err:
