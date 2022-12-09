@@ -26,6 +26,9 @@ def is_dashboard():
 
     try:
 
+
+        info = display_income_statement(symbol=symbol)
+
         formatted_data = [
             {"metric": "Fiscal Date Ending", "year_one": info[0]["Fiscal Date Ending"], "year_two": info[1]['Fiscal Date Ending'], "year_three": info[2]['Fiscal Date Ending'], "year_four": info[3]['Fiscal Date Ending'], "year_five": info[4]['Fiscal Date Ending']},
             {"metric": "Reported Currency", "year_one": info[0]["Reported Currency"], "year_two": info[1]['Reported Currency'], "year_three": info[2]['Reported Currency'], "year_four": info[3]['Reported Currency'], "year_five": info[4]['Reported Currency']},
@@ -53,15 +56,11 @@ def is_dashboard():
 
         ]
 
-
-        clean_years = display_income_statement(symbol=symbol)
-        
         return render_template("is_dashboard.html",
             symbol=symbol,
-
             table_data = formatted_data
-
         )
+
     except Exception as err:
         print('OOPS', err)
 
