@@ -26,12 +26,6 @@ def is_dashboard():
 
     try:
 
-
-        info= display_income_statement(symbol=symbol)
-
-
-
-
         formatted_data = [
             {"metric": "Fiscal Date Ending", "year_one": info[0]["Fiscal Date Ending"], "year_two": info[1]['Fiscal Date Ending'], "year_three": info[2]['Fiscal Date Ending'], "year_four": info[3]['Fiscal Date Ending'], "year_five": info[4]['Fiscal Date Ending']},
             {"metric": "Reported Currency", "year_one": info[0]["Reported Currency"], "year_two": info[1]['Reported Currency'], "year_three": info[2]['Reported Currency'], "year_four": info[3]['Reported Currency'], "year_five": info[4]['Reported Currency']},
@@ -60,50 +54,13 @@ def is_dashboard():
         ]
 
 
-
-
-
         clean_years = display_income_statement(symbol=symbol)
         
         return render_template("is_dashboard.html",
             symbol=symbol,
+
             table_data = formatted_data
 
-        clean_years = display_income_statement(symbol=symbol)
-
-        return render_template("is_dashboard.html",
-            symbol=symbol,
-            clean_years = clean_years
-
-            #zero = ('Fiscal Date Ending: ' + clean_years[0]['fiscalDateEnding']),
-            #one = ('Reported Currency: ' + clean_years[0]['reportedCurrency']),
-            #two = ('Total Revenue: ' + clean_years[0]['totalRevenue']),
-            #three = ('Cost of Revenue: ' + clean_years[0]['costOfRevenue']),
-            #four = ('Cost of Goods and Services Sold: ' + clean_years[0]['costofGoodsAndServicesSold']),
-            #five = ('Operating Income: ' + clean_years[0]['operatingIncome']),
-            #six = ('Selling, General, Administrative: ' + clean_years[0]['sellingGeneralAndAdministrative']),
-            #seven = ('Research & Development: ' + clean_years[0]['researchAndDevelopment']),
-            #eight = ('Net Investment Income: ' + clean_years[0]['investmentIncomeNet']),
-            #nine = ('Interest Income: ' + clean_years[0]['interestIncome']),
-            #ten = ('Interest Expense: ' + clean_years[0]['interstExpense']),
-            #eleven = ('Non-interest Income: ' + clean_years[0]['nonInterstIncome']),
-            #twelve = ('Other Non-Operating Income: ' + clean_years[0]['otherNonOperatingIncome']),
-            #thirteen = ('Depreciation: ' + clean_years[0]['depreciation']),
-            #fourteen = ('Depreciation and Amortization: ' + clean_years[0]['depreciationAndAmortization']),
-            #fifteen = ('Income Before Tax: ' + clean_years[0]['incomeBeforeTax']),
-            #sixteen = ('Income Tax Expense: ' + clean_years[0]['incomeTaxExpense']),
-            #seventeen = ('Interest and Debt Expense: ' + clean_years[0]['interestAndDebtExpense']),
-            #eighteen = ('Net Income From Continuing Operations: ' + clean_years[0]['netIncomeFromContinuingOperations']),
-            #nineteen = ('Comprehensive Income Net of Tax: ' + clean_years[0]['comprehensiveIncomeNetOfTax']),
-            #twenty = ('EBIT: ' + clean_years[0]['ebit']),
-            #twentyone = ('EBITDA: ' + clean_years[0]['ebitda']),
-            #twentytwo = ('Net Income: ' + clean_years[0]['netIncome'])
-
-        info = display_income_statement(symbol=symbol)
-
-        return render_template("is_dashboard.html",
-            symbol=symbol,
-            ics = info
         )
     except Exception as err:
         print('OOPS', err)
