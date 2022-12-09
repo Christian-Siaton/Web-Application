@@ -1,0 +1,20 @@
+
+{% extends "bootstrap_5_layout.html" %}
+{% set active_page = "cs_form" %}
+
+{% block content %}
+
+    <h2>Cash Flow Statement Form</h2>
+
+    <p>Request a Cash Flow Statement...</p>
+
+    <form action="/cs/dashboard" method="POST">
+
+        <label>Stock Symbol:</label>
+        <input type="text" name="symbol" placeholder="MSFT" value="MSFT">
+       
+
+        <button class="btn btn-success">Submit</button>
+    </form>
+
+{% endblock %}

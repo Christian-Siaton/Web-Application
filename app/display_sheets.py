@@ -7,6 +7,7 @@ def display_balance_sheet (symbol):
     url = f'https://www.alphavantage.co/query?function=BALANCE_SHEET&symbol={symbol}&apikey={API_KEY}'
     r = requests.get(url)
     data = r.json()
+    final = []
 
     if "symbol" not in data.keys():
         print ("Invalid ticker ID")
@@ -76,6 +77,11 @@ def display_balance_sheet (symbol):
 
         clean_years.append(clean_year)
 
+    #for year in clean_years:
+        #for item in year:
+            #final.append(item + ":" + year[item])
+
+
     for year in clean_years:
         for item in year:
             print (item + ":", year[item])
@@ -89,6 +95,7 @@ def display_income_statement (symbol):
     url = f'https://www.alphavantage.co/query?function=INCOME_STATEMENT&symbol={symbol}&apikey={API_KEY}'
     r = requests.get(url)
     data = r.json()
+    final = []
 
     if "symbol" not in data.keys():
         print ("Invalid ticker ID")
@@ -144,6 +151,11 @@ def display_income_statement (symbol):
 
         clean_years.append(clean_year)
 
+    #for year in clean_years:
+        #for item in year:
+            #final.append(item + ":" + year[item])
+
+
     for year in clean_years:
         for item in year:
             print (item + ":", year[item])
@@ -157,6 +169,7 @@ def display_cashflow_statement (symbol):
     url = f'https://www.alphavantage.co/query?function=CASH_FLOW&symbol={symbol}&apikey={API_KEY}'
     r = requests.get(url)
     data = r.json()
+    final = []
 
     if "symbol" not in data.keys():
         print ("Invalid ticker ID")
@@ -219,6 +232,11 @@ def display_cashflow_statement (symbol):
         }
 
         clean_years.append(clean_year)
+
+    #for year in clean_years:
+        #for item in year:
+            #final.append(item + ":" + year[item])
+
 
     for year in clean_years:
         for item in year:
