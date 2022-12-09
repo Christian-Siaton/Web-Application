@@ -26,6 +26,7 @@ def is_dashboard():
 
     try:
 
+web-app
         clean_years = display_income_statement(symbol=symbol)
 
         return render_template("is_dashboard.html",
@@ -56,6 +57,13 @@ def is_dashboard():
             #twenty = ('EBIT: ' + clean_years[0]['ebit']),
             #twentyone = ('EBITDA: ' + clean_years[0]['ebitda']),
             #twentytwo = ('Net Income: ' + clean_years[0]['netIncome'])
+
+        info = display_income_statement(symbol=symbol)
+
+        return render_template("is_dashboard.html",
+            symbol=symbol,
+            ics = info
+main
         )
     except Exception as err:
         print('OOPS', err)
