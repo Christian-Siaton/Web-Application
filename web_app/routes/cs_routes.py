@@ -27,10 +27,22 @@ def cs_dashboard():
     try:
 
         info = display_cashflow_statement(symbol=symbol)
+        #breakpoint()
+
+
+        formatted_data = [
+            {"metric": "NET INCOME", "year_one": 100, "year_two": 200, "year_three": 300, "year_four": 400, "year_five": 500},
+            {"metric": "Dividend Payout", "year_one": 100, "year_two": 200, "year_three": 300, "year_four": 400, "year_five": 500},
+            {"metric": "Total Cost", "year_one": 100, "year_two": 200, "year_three": 300, "year_four": 400, "year_five": 500},
+            {"metric": "Total Revenue", "year_one": 100, "year_two": 200, "year_three": 300, "year_four": 400, "year_five": 500},
+            {"metric": "Change in Receivables", "year_one": 100, "year_two": 200, "year_three": 300, "year_four": 400, "year_five": 500},
+        ]
+
 
         return render_template("cs_dashboard.html",
             symbol=symbol,
-            cs = info
+            cs = info,
+            table_data = formatted_data
         )
     except Exception as err:
         print('OOPS', err)
