@@ -2,4 +2,7 @@ requests
 
 python-dotenv
 
+#for our web app interface:
+flask
+
 pytest

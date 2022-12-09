@@ -1,0 +1,27 @@
+{% extends "bootstrap_5_layout.html" %}
+{% set active_page = "home" %}
+
+{% block content %}
+
+    <h1>Home</h1>
+
+    <p>Our Web-Application was developed to help people get easy access to the three main financial statements for any company</p>
+
+    <!-- SEE: https://getbootstrap.com/docs/5.2/components/carousel/ -->
+    <div id="carouselExampleSlidesOnly" class="carousel slide" data-bs-ride="carousel">
+        <div class="carousel-inner">
+            <div class="carousel-item active">
+                <img src="https://th.bing.com/th/id/R.0b5cb3cfc646cc91f44b7b631cde44e3?rik=HqnLyX%2bdT0TvGg&riu=http%3a%2f%2ftemplatelab.com%2fwp-content%2fuploads%2f2016%2f01%2fBalance-Sheet-Template-22.jpg&ehk=edp%2fH%2fgyjGM84Byl1JvNv7zzA5nUuoV28fdkrVtkno4%3d&risl=&pid=ImgRaw&r=0" class="d-block w-100" alt="...">
+            </div>
+
+            <div class="carousel-item">
+                <img src="https://th.bing.com/th/id/R.c9a11066502b69e0ba7d894c4f48a59e?rik=F7jTBJ5awaLQrA&riu=http%3a%2f%2fwww.freetemplatedownloads.net%2fwp-content%2fuploads%2f2016%2f10%2fIncome-Statement-Template-01.jpg&ehk=w5%2fc36YOrxc2WDgizE9e%2bBo7%2fNOEKrX5asJ8paiYE%2b4%3d&risl=&pid=ImgRaw&r=0" class="d-block w-100" alt="...">
+            </div>
+
+            <div class="carousel-item">
+                <img src="https://th.bing.com/th/id/R.3f1ba006db8c2e694b1d0c5270bf3f5b?rik=3fpJte7jKHUSzQ&riu=http%3a%2f%2ftemplatelab.com%2fwp-content%2fuploads%2f2016%2f09%2fcash-flow-statement-37.jpg&ehk=GCv5SRt2mF4E07SqkATiJzy8UUXPp9o4yckugygl%2brI%3d&risl=&pid=ImgRaw&r=0" class="d-block w-100" alt="...">
+            </div>
+        </div>
+    </div>
+
+{% endblock %}

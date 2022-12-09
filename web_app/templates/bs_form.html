@@ -1,0 +1,20 @@
+
+{% extends "bootstrap_5_layout.html" %}
+{% set active_page = "bs_form" %}
+
+{% block content %}
+
+    <h2>Balance Sheet Form</h2>
+
+    <p>Request a Balance Sheet...</p>
+
+    <form action="/bs/dashboard" method="POST">
+
+        <label>Stock Symbol:</label>
+        <input type="text" name="symbol" placeholder="MSFT" value="MSFT">
+       
+
+        <button class="btn btn-success">Submit</button>
+    </form>
+
+{% endblock %}
