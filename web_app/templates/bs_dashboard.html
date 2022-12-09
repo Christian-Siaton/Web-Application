@@ -5,6 +5,36 @@
 
     <h2>Balance Sheet Dashboard ({{ symbol }})</h2>
 
-    <p class="lead">Balance Sheet Info: {{ clean_years }}</p>
+    <table class="table table-hover table-responsive caption-top">
+        <caption>Latest Data</caption>
+        <thead>
+            <tr>
+                <th scope="col">Metric</th>
+                <th scope="col">Year One</th>
+                <th scope="col">Year Two</th>
+                <th scope="col">Year Three</th>
+                <th scope="col">Year Four</th>
+                <th scope="col">Year Five</th>
+            </tr>
+        </thead>
+        <tbody>
+
+        <!--
+            JINJA FOR LOOP
+            https://jinja.palletsprojects.com/en/3.1.x/templates/
+        -->
+        {% for row in table_data %}
+            <tr>
+                <td>{{ row["metric"] }}</td>
+                <td>{{ row["year_one"] }}</td>
+                <td>{{ row["year_two"] }}</td>
+                <td>{{ row["year_three"] }}</td>
+                <td>{{ row["year_four"] }}</td>
+                <td>{{ row["year_five"] }}</td>
+            </tr>
+        {% endfor %}
+
+        </tbody>
+    </table>
     
 {% endblock %}
