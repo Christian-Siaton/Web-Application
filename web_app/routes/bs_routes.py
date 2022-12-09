@@ -73,8 +73,10 @@ def bs_dashboard():
 
         return render_template("bs_dashboard.html",
             symbol=symbol,
+            
             table_data = formatted_data            
     
+
             
         )
     except Exception as err:
