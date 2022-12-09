@@ -27,6 +27,11 @@ def cs_dashboard():
     try:
 
         info = display_cashflow_statement(symbol=symbol)
+<<<<<<< HEAD
+=======
+web-app
+        #breakpoint()
+>>>>>>> 83d2fd77834a7fd35cf679537296eaf071e55781
 
 
         formatted_data = [
@@ -65,6 +70,9 @@ def cs_dashboard():
             symbol=symbol,
             info = info,
             table_data = formatted_data
+
+        
+
         )
     except Exception as err:
         print('OOPS', err)
