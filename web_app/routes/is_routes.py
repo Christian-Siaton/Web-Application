@@ -62,10 +62,13 @@ def is_dashboard():
 
 
 
+        clean_years = display_income_statement(symbol=symbol)
+        
         return render_template("is_dashboard.html",
             symbol=symbol,
             table_data = formatted_data
 
+        
 
             
         )

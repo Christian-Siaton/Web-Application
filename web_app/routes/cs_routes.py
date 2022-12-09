@@ -28,7 +28,6 @@ def cs_dashboard():
 
         info = display_cashflow_statement(symbol=symbol)
 
-
         formatted_data = [
             {"metric": "Fiscal Date Ending", "year_one": info[0]["Fiscal Date Ending"], "year_two": info[1]['Fiscal Date Ending'], "year_three": info[2]['Fiscal Date Ending'], "year_four": info[3]['Fiscal Date Ending'], "year_five": info[4]['Fiscal Date Ending']},
             {"metric": "Reported Currency", "year_one": info[0]["Reported Currency"], "year_two": info[1]["Reported Currency"], "year_three": info[2]["Reported Currency"], "year_four": info[3]["Reported Currency"], "year_five": info[4]["Reported Currency"]},
@@ -67,7 +66,26 @@ def cs_dashboard():
             table_data = formatted_data
 
         
+        #breakpoint()
 
+
+        formatted_data = [
+            {"metric": "NET INCOME", "year_one": 100, "year_two": 200, "year_three": 300, "year_four": 400, "year_five": 500},
+            {"metric": "Dividend Payout", "year_one": 100, "year_two": 200, "year_three": 300, "year_four": 400, "year_five": 500},
+            {"metric": "Total Cost", "year_one": 100, "year_two": 200, "year_three": 300, "year_four": 400, "year_five": 500},
+            {"metric": "Total Revenue", "year_one": 100, "year_two": 200, "year_three": 300, "year_four": 400, "year_five": 500},
+            {"metric": "Change in Receivables", "year_one": 100, "year_two": 200, "year_three": 300, "year_four": 400, "year_five": 500},
+        ]
+
+
+        return render_template("cs_dashboard.html",
+            symbol=symbol,
+            cs = info,
+            table_data = formatted_data
+
+        return render_template("cs_dashboard.html",
+            symbol=symbol,
+            cs = info
         )
     except Exception as err:
         print('OOPS', err)
